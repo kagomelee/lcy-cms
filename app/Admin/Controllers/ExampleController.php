@@ -23,7 +23,7 @@ class ExampleController extends Controller
     {
         return $content
             ->header('Index')
-            ->description('description')
+            //->description('description')
             ->body($this->grid());
     }
 

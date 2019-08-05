@@ -26,6 +26,14 @@
 </head>
 
 <body class="hold-transition <?php echo e(config('admin.skin'), false); ?> <?php echo e(join(' ', config('admin.layout')), false); ?>">
+
+<?php if($alert = config('admin.top_alert')): ?>
+    <div style="text-align: center;padding: 5px;font-size: 12px;background-color: #ffffd5;color: #ff0000;">
+        <?php echo $alert; ?>
+
+    </div>
+<?php endif; ?>
+
 <div class="wrapper">
 
     <?php echo $__env->make('admin::partials.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -40,14 +48,13 @@
         </div>
         <?php echo Admin::script(); ?>
 
+        <?php echo Admin::html(); ?>
+
     </div>
 
     <?php echo $__env->make('admin::partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 </div>
-
-<?php echo Admin::html(); ?>
-
 
 <button id="totop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up"></i></button>
 

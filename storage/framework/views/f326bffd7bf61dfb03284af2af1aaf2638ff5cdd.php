@@ -27,7 +27,7 @@
                 <ul class="dropdown-menu" role="menu" style="min-width: 210px;max-height: 300px;overflow: auto;">
                     <?php $__currentLoopData = Admin::menuLinks(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <li>
-                        <a href="<?php echo e(admin_base_path($link['uri']), false); ?>"><i class="fa <?php echo e($link['icon'], false); ?>"></i><?php echo e($link['title'], false); ?></a>
+                        <a href="<?php echo e(admin_base_path($link['uri']), false); ?>"><i class="fa <?php echo e($link['icon'], false); ?>"></i><?php echo e(admin_trans($link['title']), false); ?></a>
                     </li>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>

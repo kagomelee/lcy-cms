@@ -1,4 +1,4 @@
-<?php if(Admin::user()->visible($item['roles']) && (empty($item['permission']) ?: Admin::user()->can($item['permission']))): ?>
+<?php if(Admin::user()->visible(\Illuminate\Support\Arr::get($item, 'roles', [])) && Admin::user()->can(\Illuminate\Support\Arr::get($item, 'permission'))): ?>
     <?php if(!isset($item['children'])): ?>
         <li>
             <?php if(url()->isValidUrl($item['uri'])): ?>

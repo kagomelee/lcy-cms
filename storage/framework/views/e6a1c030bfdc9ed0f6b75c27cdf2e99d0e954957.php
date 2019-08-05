@@ -13,26 +13,14 @@
             <button type="submit" class="btn btn-primary"><?php echo e(trans('admin.submit'), false); ?></button>
         </div>
 
-        <?php if(in_array('continue_editing', $checkboxes)): ?>
-        <label class="pull-right" style="margin: 5px 10px 0 0;">
-            <input type="checkbox" class="after-submit" name="after-save" value="1"> <?php echo e(trans('admin.continue_editing'), false); ?>
-
-        </label>
-        <?php endif; ?>
-
-        <?php if(in_array('continue_creating', $checkboxes)): ?>
+        <?php $__currentLoopData = $submit_redirects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value => $redirect): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if(in_array($redirect, $checkboxes)): ?>
             <label class="pull-right" style="margin: 5px 10px 0 0;">
-                <input type="checkbox" class="after-submit" name="after-save" value="2"> <?php echo e(trans('admin.continue_creating'), false); ?>
+                <input type="checkbox" class="after-submit" name="after-save" value="<?php echo e($value, false); ?>" <?php echo e(($default_check == $redirect) ? 'checked' : '', false); ?>> <?php echo e(trans("admin.{$redirect}"), false); ?>
 
             </label>
-        <?php endif; ?>
-
-        <?php if(in_array('view', $checkboxes)): ?>
-        <label class="pull-right" style="margin: 5px 10px 0 0;">
-            <input type="checkbox" class="after-submit" name="after-save" value="3"> <?php echo e(trans('admin.view'), false); ?>
-
-        </label>
-        <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         <?php endif; ?>
 

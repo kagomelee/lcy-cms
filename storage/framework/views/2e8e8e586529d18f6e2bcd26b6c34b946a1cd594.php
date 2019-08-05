@@ -31,21 +31,31 @@
 
 
     <!-- /.box-header -->
-    <div class="box-body no-padding">
+    <div class="box-body table-responsive no-padding">
         <table class="table table-hover" id="<?php echo e($grid->tableID, false); ?>">
             <thead>
                 <tr>
                     <?php $__currentLoopData = $grid->visibleColumns(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <th class="column-<?php echo $column->getName(); ?>"><?php echo e($column->getLabel(), false); ?><?php echo $column->renderHeader(); ?></th>
+                    <th <?php echo $column->formatHtmlAttributes(); ?>><?php echo e($column->getLabel(), false); ?><?php echo $column->renderHeader(); ?></th>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tr>
             </thead>
 
+            <?php if($grid->hasQuickCreate()): ?>
+                <?php echo $grid->renderQuickCreate(); ?>
+
+            <?php endif; ?>
+
             <tbody>
+
+                <?php if($grid->rows()->isEmpty()): ?>
+                    <?php echo $__env->make('admin::grid.empty-grid', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                <?php endif; ?>
+
                 <?php $__currentLoopData = $grid->rows(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr <?php echo $row->getRowAttributes(); ?>>
                     <?php $__currentLoopData = $grid->visibleColumnNames(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $name): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <td <?php echo $row->getColumnAttributes($name); ?> class="column-<?php echo $name; ?>">
+                    <td <?php echo $row->getColumnAttributes($name); ?>>
                         <?php echo $row->column($name); ?>
 
                     </td>

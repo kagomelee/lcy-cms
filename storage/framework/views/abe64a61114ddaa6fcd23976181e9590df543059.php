@@ -3,7 +3,7 @@
     <!-- To the right -->
     <div class="pull-right hidden-xs">
         <?php if(config('admin.show_environment')): ?>
-            <strong>Env</strong>&nbsp;&nbsp; <?php echo env('APP_ENV'); ?>
+            <strong>Env</strong>&nbsp;&nbsp; <?php echo config('app.env'); ?>
 
         <?php endif; ?>
 

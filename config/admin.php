@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => 'LCY-admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>LCY</b> admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>LCY</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => 'Admin',
+    'title' => 'LCY Admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,6 +136,7 @@ return [
         'excepts' => [
             'auth/login',
             'auth/logout',
+	    'locale',
         ],
     ],
 
@@ -243,7 +244,7 @@ return [
     | Supported: "tencent", "google", "yandex".
     |
     */
-    'map_provider' => 'google',
+    'map_provider' => 'tencent',
 
     /*
     |--------------------------------------------------------------------------
@@ -344,6 +345,90 @@ return [
     |
     */
     'extensions' => [
+		'env-manager' => [
+        	// If the value is set to false, this extension will be disabled
+        	'enable' => true
+    		],
+		'api-tester' => [
+        
+            		// route prefix for APIs
+              		'prefix' => 'api',
 
+           		 // auth guard for api
+            		'guard'  => 'api',
+
+            		// If you are not using the default user model as the authentication model, set it up
+            		'user_retriever' => function ($id) {
+              		  return \App\User::find($id);
+            		},
+       		 ],
+		'daterangepicker' => [
+        
+          		  // Set to `false` if you want to disable this extension
+            		'enable' => true,
+            
+           		 // Find more configurations http://www.daterangepicker.com/
+            		'config' => [
+            
+            		]
+        	],
+		'china-distpicker' => [
+        
+           		 // 如果要关掉这个扩展，设置为false
+            		'enable' => true,
+        	],
+		'cropper' => [
+        
+         		   // 如果要关掉这个扩展，设置为false
+            		'enable' => true,
+        	],
+		'phpinfo' => [
+        
+           		 // Set this to false if you want to disable this extension
+            		'enable' => true,
+            
+           		 // What information to show，see http://php.net/manual/en/function.phpinfo.php#refsect1-function.phpinfo-parameters
+            		'what' => INFO_ALL,
+            
+            		// Set access path，defaults to `phpinfo`
+            		//'path' => '~phpinfo',
+        	],
+		'star-rating' => [
+     
+        		 // set to false if you want to disable this extension
+         		'enable' => true,
+         
+         		// configuration
+         		'config' => [
+             			'min' => 1, 'max' => 5, 'step' => 1, 'size' => 'xs', 'language' => 'zh',
+						]
+         	],
+			
+		'ueditor' => [
+
+            		// 如果要关掉这个扩展，设置为false
+            		'enable' => true,
+
+            		// 编辑器的前端配置 参考：http://fex.baidu.com/ueditor/#start-config
+            		'config' => [
+                		'initialFrameHeight' => 400, // 例如初始化高度
+            		],
+            		// 'field_type' => '自定义名字'
+        	],
+		'echarts' => [
+         		// Set to `false` if you want to disable this extension
+            		'enable' => true,
+        	],
+		'multi-language' => [
+           		'enable' => true,
+            		// the key should be same as var locale in config/app.php
+            		// the value is used to show
+            		'languages' => [
+                		'en' => 'English',
+                		'zh-CN' => '简体中文',
+            		],
+            		// default locale
+            		'default' => 'zh-CN',
+        	],
     ],
 ];

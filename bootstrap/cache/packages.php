@@ -6,6 +6,13 @@
       0 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
     ),
   ),
+  'codingyu/ueditor' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Codingyu\\Ueditor\\UeditorServiceProvider',
+    ),
+  ),
   'encore/laravel-admin' => 
   array (
     'providers' => 
@@ -22,6 +29,111 @@
     'providers' => 
     array (
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    ),
+  ),
+  'jxlwqq/echarts' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Jxlwqq\\Echarts\\EchartsServiceProvider',
+    ),
+  ),
+  'jxlwqq/env-manager' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Jxlwqq\\EnvManager\\EnvManagerServiceProvider',
+    ),
+  ),
+  'jxlwqq/star-rating' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Jxlwqq\\StarRating\\StarRatingServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/api-tester' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\ApiTester\\ApiTesterServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/china-distpicker' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\ChinaDistpicker\\ChinaDistpickerServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/config' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\Config\\ConfigServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/cropper' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Cropper\\CropperServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/daterangepicker' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\DateRangePicker\\DateRangePickerServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/helpers' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\Helpers\\HelpersServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/id-validator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\IdValidator\\IdValidatorServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/log-viewer' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\LogViewer\\LogViewerServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/media-player' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\MediaPlayer\\MediaPlayerServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/phpinfo' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\PHPInfo\\PHPInfoServiceProvider',
+    ),
+  ),
+  'laravel-admin-ext/redis-manager' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\RedisManager\\RedisManagerServiceProvider',
+    ),
+  ),
+  'laravel-admin-extensions/multi-language' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider',
     ),
   ),
   'laravel/tinker' => 
@@ -43,6 +155,13 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'overtrue/laravel-ueditor' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     ),
   ),
 );

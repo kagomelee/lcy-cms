@@ -1,16 +1,22 @@
-<input type="checkbox" class="<?php echo e($selectAllName, false); ?>" />&nbsp;
+
 
 <?php if(!$isHoldSelectAllCheckbox): ?>
-<div class="btn-group">
-    <a class="btn btn-sm btn-default">&nbsp;<span class="hidden-xs"><?php echo e(trans('admin.action'), false); ?></span></a>
+<div class="btn-group <?php echo e($selectAllName, false); ?>-btn" style="display:none;margin-right: 5px;">
+    <a class="btn btn-sm btn-default"><span class="hidden-xs selected"></span></a>
     <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
+    <?php if(!$actions->isEmpty()): ?>
     <ul class="dropdown-menu" role="menu">
         <?php $__currentLoopData = $actions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <li><a href="#" class="<?php echo e($action->getElementClass(false), false); ?>"><?php echo e($action->getTitle(), false); ?></a></li>
+            <?php if($action instanceof \Encore\Admin\Actions\BatchAction): ?>
+                <li><?php echo $action->render(); ?></li>
+            <?php else: ?>
+                <li><a href="#" class="<?php echo e($action->getElementClass(false), false); ?>"><?php echo $action->render(); ?> </a></li>
+            <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
+    <?php endif; ?>
 </div>
 <?php endif; ?><?php /**PATH /www/wwwroot/admin.licongying.cn/cmall/vendor/encore/laravel-admin/src/../resources/views/grid/batch-actions.blade.php ENDPATH**/ ?>

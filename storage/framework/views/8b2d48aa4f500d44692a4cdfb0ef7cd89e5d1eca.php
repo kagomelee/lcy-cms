@@ -15,9 +15,9 @@
     <!-- /.box-body -->
     <?php if(count($buttons) > 0): ?>
     <div class="box-footer">
-        <div class="col-md-2"></div>
+        <div class="col-md-<?php echo e($width['label'], false); ?>"></div>
 
-        <div class="col-md-8">
+        <div class="col-md-<?php echo e($width['field'], false); ?>">
             <?php if(in_array('reset', $buttons)): ?>
             <div class="btn-group pull-left">
                 <button type="reset" class="btn btn-warning pull-right"><?php echo e(trans('admin.reset'), false); ?></button>
