@@ -164,4 +164,15 @@
       0 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
     ),
   ),
+  'overtrue/laravel-wechat' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Overtrue\\LaravelWeChat\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'EasyWeChat' => 'Overtrue\\LaravelWeChat\\Facade',
+    ),
+  ),
 );

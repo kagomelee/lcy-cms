@@ -46,10 +46,11 @@
     42 => 'Carbon\\Laravel\\ServiceProvider',
     43 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     44 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
-    45 => 'App\\Providers\\AppServiceProvider',
-    46 => 'App\\Providers\\AuthServiceProvider',
-    47 => 'App\\Providers\\EventServiceProvider',
-    48 => 'App\\Providers\\RouteServiceProvider',
+    45 => 'Overtrue\\LaravelWeChat\\ServiceProvider',
+    46 => 'App\\Providers\\AppServiceProvider',
+    47 => 'App\\Providers\\AuthServiceProvider',
+    48 => 'App\\Providers\\EventServiceProvider',
+    49 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -84,10 +85,11 @@
     28 => 'KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider',
     29 => 'Carbon\\Laravel\\ServiceProvider',
     30 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
-    31 => 'App\\Providers\\AppServiceProvider',
-    32 => 'App\\Providers\\AuthServiceProvider',
-    33 => 'App\\Providers\\EventServiceProvider',
-    34 => 'App\\Providers\\RouteServiceProvider',
+    31 => 'Overtrue\\LaravelWeChat\\ServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\EventServiceProvider',
+    35 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
