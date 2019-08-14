@@ -42,15 +42,18 @@
     38 => 'Encore\\PHPInfo\\PHPInfoServiceProvider',
     39 => 'Encore\\Admin\\RedisManager\\RedisManagerServiceProvider',
     40 => 'KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider',
-    41 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    42 => 'Carbon\\Laravel\\ServiceProvider',
-    43 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    44 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
-    45 => 'Overtrue\\LaravelWeChat\\ServiceProvider',
-    46 => 'App\\Providers\\AppServiceProvider',
-    47 => 'App\\Providers\\AuthServiceProvider',
-    48 => 'App\\Providers\\EventServiceProvider',
-    49 => 'App\\Providers\\RouteServiceProvider',
+    41 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    42 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    43 => 'Carbon\\Laravel\\ServiceProvider',
+    44 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    45 => 'Overtrue\\LaravelUEditor\\UEditorServiceProvider',
+    46 => 'Overtrue\\LaravelWeChat\\ServiceProvider',
+    47 => 'SocialiteProviders\\Manager\\ServiceProvider',
+    48 => 'App\\Providers\\AppServiceProvider',
+    49 => 'App\\Providers\\AuthServiceProvider',
+    50 => 'App\\Providers\\EventServiceProvider',
+    51 => 'App\\Providers\\RouteServiceProvider',
+    52 => 'SocialiteProviders\\Manager\\ServiceProvider',
   ),
   'eager' => 
   array (
@@ -197,6 +200,7 @@
     'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
+    'Laravel\\Socialite\\Contracts\\Factory' => 'SocialiteProviders\\Manager\\ServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
   ),
@@ -238,10 +242,16 @@
     'Illuminate\\Validation\\ValidationServiceProvider' => 
     array (
     ),
+    'Laravel\\Socialite\\SocialiteServiceProvider' => 
+    array (
+    ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
     array (
     ),
     'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => 
+    array (
+    ),
+    'SocialiteProviders\\Manager\\ServiceProvider' => 
     array (
     ),
   ),

@@ -32,3 +32,9 @@ Route::get('/register', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// 用户点击登录按钮时请求的地址
+Route::get('/auth/oauth', 'Auth\AuthController@oauth');
+//微信接口回调地址
+Route::get('/auth/callback', 'Auth\AuthController@callback');
